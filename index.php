@@ -40,7 +40,7 @@ if (isset($_GET['order'])) {
 <a href='index.php?order=rating'>rating</a>
 
 <?php
-echo "<br/>"."Series"."<br/>";
+echo "<br/>Series<br/>";
 
 $stmt = $pdo->query('SELECT * FROM netland.series ORDER BY rating;');
 while ($row = $stmt->fetch())
@@ -48,7 +48,7 @@ while ($row = $stmt->fetch())
     echo "<br/>" . $row['title'] . " - Rating:  " . $row['rating'] . "<a href='series.php?id=" . $row['id'] . "'> Meer informatie</a>";
 }
 
-echo "<br/>"."Movies"."<br/>";
+echo "<br/>Movies<br/>";
 
 $stmt = $pdo->query('SELECT * FROM netland.movies ORDER BY duur;');
 while ($row = $stmt->fetch())
