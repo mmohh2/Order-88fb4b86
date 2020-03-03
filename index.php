@@ -48,7 +48,7 @@ while ($row = $stmt->fetch())
     echo "<br/>" . $row['title'] . " - Rating:  " . $row['rating'] . "<a href='series.php?id=" . $row['id'] . "'> Meer informatie</a>";
 }
 
-echo "<br/>" . "Movies" . "<br/>";
+echo "<br/>"."Movies"."<br/>";
 
 $stmt = $pdo->query('SELECT * FROM netland.movies ORDER BY duur;');
 while ($row = $stmt->fetch())
