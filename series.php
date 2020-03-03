@@ -16,6 +16,7 @@ try {
     throw new \PDOException($e->getMessage("no connection"), (int)$e->getCode());
 }
 $coachdata = $pdo->query('select * from series where id ='. $_GET['link']);
+
 ?>
 
 <html>
@@ -32,7 +33,9 @@ $coachdata = $pdo->query('select * from series where id ='. $_GET['link']);
         </tr>
         <?php
     }
+
     ?>
+
 </table>
 </body>
 </html>

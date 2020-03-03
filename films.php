@@ -16,23 +16,29 @@ try {
     throw new \PDOException($e->getMessage("no connection"), (int)$e->getCode());
 }
 $moviedata = $pdo->query('select * from movies where id ='. $_GET['link']);
+
 ?>
 
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <table>
     <?php
     foreach ($moviedata as $row){
         ?>
-        <tr>
-            <td><?php echo "title: " .  $row['title']; ?></td>
-            <td><?php echo "rating: " . $row['rating']; ?></td>
-        </tr>
-        <?php
+    <tr>
+        <td><?php echo "title: " .  $row['title']; ?></td>
+        <td><?php echo "rating: " . $row['rating']; ?></td>
+    </tr>
+    <?php
     }
+
     ?>
+
 </table>
 </body>
 </html>
+
