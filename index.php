@@ -53,7 +53,7 @@ echo "<br/>Movies<br/>";
 $stmt = $pdo->query('SELECT * FROM netland.movies ORDER BY duur;');
 while ($row = $stmt->fetch())
 {
-    echo "<br/>" . $row['title'] . " - Duur:  " . $row['duur'] . "min" . "<a href='films.php?id=" . $row['id'] . "'> Meer informatie</a>";
+    echo "<br/>" . $row['title'] . " - Duur:  " . $row['duur'] . "min<a href='films.php?id=" . $row['id'] . "'> Meer informatie</a>";
 }
 
 ?>
